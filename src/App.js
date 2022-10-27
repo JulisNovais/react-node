@@ -1,7 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  useState
+  const [books, setBooks] = useState(JSON.stringify(books, setBooks));
+
+  useEffect(() => {
+    fetch('/books')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+  })
+
   return (
     <div className="App">
       <header className="App-header">
